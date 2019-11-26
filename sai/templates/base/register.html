@@ -1,0 +1,10 @@
+{%extends 'base/home.html'%}
+{%block content%}
+<div align="center" style="background-color:#fadc90">
+    <form method="POST">
+        {{form.as_p}}
+        {%csrf_token%}
+        <input type="submit" value="register" style="background-color:orange">
+    </form>
+</div>
+{%endblock%}

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+{%extends 'base/home.html'%}
+{%block content%}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<body>
+<div align="center">
+    <form method="POST">
+        {{form.as_p}}
+        {%csrf_token%}
+        <input type="submit" value="login" style="background-color:green;color:yellow">
+    </form>
+</div>
+</body>
+</html>
+{%endblock%}

@@ -1,0 +1,157 @@
+{%extends 'base/home.html'%}
+{%block content%}
+{%load static%}
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {box-sizing: border-box;}
+body {font-family: Verdana, sans-serif;}
+.mySlides {display: none;}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+
+  background-color:#e6f9ff;
+  padding:0px 0px 0px 20px;
+
+  border:3px solid #ff1aff;
+  border-radius:5px;
+ border-spacing: 10px 10px;
+ bac
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  height: 0px;
+  width: 0px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 0%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 3s;
+  animation-name: fade;
+  animation-duration: 5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 10px) {
+  .text {font-size: 11px}
+}
+</style>
+</head>
+<body>
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext"></div>
+  <img src="{%static 'images/puttaparthi.jpg'%}" style="width:1300px;height:400px">
+
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext"></div>
+  <img src="{%static 'images/mandhir.jpg'%}" style="width:1300px;height:400px;">
+
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext"></div>
+  <img src="{%static 'images/inside.jpg'%}" style="width:1300px;height:400px">
+
+</div>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot"></span>
+  <span class="dot"></span>
+  <span class="dot"></span>
+</div>
+
+<script>
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 5000); // Change image every 2 seconds
+}
+</script>
+<div>
+    <div id='inside' style="width:500px; margin:auto;" >
+    <p><pre align="center" style="border:1px solid yellow;color:green;background-color:#ffaa220;font-size:25px">Manava Sevaye Madhava Seva
+Service to Man is Service to God
+        -Baba</pre></p></div>
+    <div style="padding:0px 10px 0px 10px"><div style="padding:20px;background-color:#e6f9ff;border:1px solid yellow;"><div style="padding:10px;"><p align="justify"> The Sri Sathya Sai Seva Organisation was founded in the 1960s by Bhagawan Sri Sathya Sai Baba to
+  enable its members to undertake service activities as a means to spiritual advancement. The Sathya
+  Sai Organisation derives inspiration, guidance and strength from Bhagawan Baba’s mission and message
+  of propagating the truth of man’s inherent divinity, which is proclaimed and preached by all
+  religions of the world. In consonance with this truth, the Organisation has as its main objective
+  selfless love and service without any distinction of religion, nationality, race, socio-economic
+  status, either for those who work in the Organisation or for those who are served by them.
+  Thus, it transcends all barriers, leading humanity towards the ideal of ‘Fatherhood of God and
+  Brotherhood of Man’. In fact, this spiritual basis enables every one in the Organisation to pursue
+  his own religion better by putting its teachings into practice by way of love and service to the
+  God who dwells in all hearts. That is why the Sai Organisation features in its emblem the symbols of
+  some of the major religions of the world. There is no fee or subscription for membership. .</p></div>
+    </div></div></div>
+<div style="background-color:orange;width:100%;height:200px" align="center">
+<p style="font-size:40px;color:red;padding:50px 20px 30px 20px" align="center">for testing purpose only</p>
+</div>
+</body>
+{%endblock%}
+

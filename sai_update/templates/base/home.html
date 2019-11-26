@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+{%load staticfiles%}
+<head>
+    <meta charset="UTF-8">
+    <link href="{%static 'css/home.css'%}" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <title>sai</title>
+</head>
+<body>
+<div>
+
+    </div>
+<div class="first">
+
+    <img src="{%static 'images/sai.jpg'%}" class="img-circle"  hspace="25" >
+</div>
+<div class="second">
+    <div id="head"><h1 style="color: #ff3333;font-size:50px">OM SRI SAI RAM</h1></div>
+    <div id="para"><p style="color: #ff3333;font-size:30px">SRI SATYA SAI SEVA ORGANISATIONS,TIRUPATI</p></div>
+</div>
+<div>
+<div >
+
+    <div class="third"><img src="{%static 'images/logo.png'%}"></div>
+</div></div>
+<div class="fourth">
+    <ul>
+  <li><a href="/home">Home</a></li>
+  <li><a href="/register">register</a></li>
+  <li><a href="/contact">Contact</a></li>
+
+        <li style="float:right;padding:0px 10px"><a href="/accounts/login"> login</a></li>
+</ul>
+</div>
+
+</div>
+
+{%block content%}
+{%endblock%}
+</body>
+</html>
